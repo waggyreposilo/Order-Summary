@@ -1,0 +1,147 @@
+:root{
+    --primary-paleblue:hsl(225, 100%, 94%);
+    --primary-brightblue:hsl(245, 75%, 52%);
+    --neutral-vpblue:hsl(225, 100%, 98%);
+    --neutral-desaturatedblue: hsl(224, 23%, 55%);
+    --neutral-darkblue:hsl(223, 47%, 23%);
+}
+
+*,::before,::after{
+    box-sizing:border-box;
+}
+
+*{
+    margin: unset;
+}
+
+
+body{
+    background:url('images/pattern-background-desktop.svg') no-repeat;
+    background-color: var(--primary-paleblue);
+    font-family: 'Red Hat Display', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    overflow:hidden;
+    padding:2em;
+}
+
+.container{
+    background-color: white;
+    border-radius:1rem;
+    box-shadow: 0px 7px 9px 1px var(--primary-paleblue);
+    max-width:400px;
+}
+
+.card-image{
+    width:100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.contents{
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+}
+
+.contents > h1{
+    font-size:1.5rem;
+}
+
+.title{
+    font-weight:900;
+    text-align:center;
+    color:var(--neutral-darkblue);
+}
+
+.desc{
+    font-weight:500;
+    text-align:center;
+    color:var(--neutral-desaturatedblue);
+}
+
+.current-plan{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color: var(--neutral-vpblue);
+    padding:1rem;
+    border-radius:0.5rem;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: .7fr 2fr;
+    gap:.5em;
+}
+
+.plan-desc{
+    display:flex;
+    flex-direction:column;
+    gap:.4rem;
+}
+
+.change{
+    color:var(--primary-brightblue);
+    text-decoration: underline;
+    font-weight:700;
+}
+
+.change:hover{
+    color:hsla(245, 75%, 52%, 0.8);
+    text-decoration: none;
+}
+
+.btn{
+    width:100%;
+    padding:.8rem;
+    border:none;
+    border-radius:.5rem;
+    font-weight:900;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.proceed{
+    background-color: var(--primary-brightblue);
+    color:var(--primary-paleblue);
+}
+
+.proceed:hover{
+    background-color:hsla(245, 75%, 52%, 0.8);
+}
+
+.cancel{
+    background-color: white;
+    color:var(--neutral-desaturatedblue);
+}
+
+.cancel:hover{
+    color:var(--neutral-darkblue);
+}
+
+@media only screen and (max-width:475px){
+    body{
+        background:url('images/pattern-background-mobile.svg') no-repeat;
+        background-color: var(--primary-paleblue);
+        font-size:1rem;
+        margin:0 auto;
+    }
+
+    .text{
+        font-size:.9rem;
+    }
+
+    .plan-desc{
+        font-size:.9rem;
+    }
+
+    .change{
+        font-size:.9rem;
+    }
+}
